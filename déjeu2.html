@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        function de() {
+    
+
+    r=Math.floor(Math.random()*6)+1
+    var rd="dim"+r+".png"
+    i1=document.querySelectorAll("img")[0];
+    i1.setAttribute("src",rd)
+    
+    
+    
+    r2=Math.floor(Math.random()*6)+1
+    var rd2="dim"+r2+".png"
+    i1=document.querySelectorAll("img")[1];
+    i1.setAttribute("src",rd2)
+    
+    
+    
+    if(r>r2){
+        document.querySelector("h1").innerHTML="1 win"
+    
+    }
+    if(r<r2){
+        document.querySelector("h1").innerHTML="2 win"
+    
+    }
+    if(r==r2){
+        document.querySelector("h1").innerHTML="down"
+    }
+    }
+    </script>
+    <style>
+        body{
+    background-color: aquamarine;
+    
+}
+h1{
+    color: rgb(19, 11, 255);
+    text-align: center;
+    background-color: goldenrod;
+    width: 20%;
+    margin-left: 40%;
+    border-radius: 5px;
+    font-family: cursive;
+}
+p{
+    
+    color: rgb(19, 11, 255);
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 35px;
+}
+.img{
+    height: 150px;
+    width: 150px;
+    border-radius: 15px;
+}
+.dice2{
+    display: flex;
+    justify-content: center;
+    
+}
+.dice{
+    display: flex;
+    justify-content: center;
+    
+    
+}
+button{
+    
+        display: inline-block;
+        padding: 15px 25px;
+        font-size: 24px;
+        cursor: pointer;
+        text-align: center;
+        text-decoration: none;
+        outline: none;
+        color: #fff;
+        background-color: #04AA6D;
+        border: none;
+        border-radius: 15px;
+        box-shadow: -8%;
+      
+
+    }
+button:hover {background-color: #3e8e41}
+
+button:active {
+      background-color: #3e8e41;
+      box-shadow: 0 5px #666;
+      transform: translateY(4px);
+    }
+    .containe{
+        margin-top:-5% ;
+       
+    }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body >
+    
+    <button onclick="de()">reset</button>
+    <div class="container">
+        
+       
+        <p>Player 1</p>
+        <div class="dice">
+            
+            <img  class="img" src="dim6.png">
+        </div>
+        <p>Player 2</p>
+        <div class="dice2">
+            
+            <img class="img" src="dim6.png" alt="">
+        </div>
+    </div>
+    <h1>Star!!!</h1>
+    <h2></h2>
+    
+
+
+
+
+</body>
+</html>
